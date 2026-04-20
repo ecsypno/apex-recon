@@ -1,10 +1,10 @@
-name: codename-rkn
+name: apex-recon
 services:
   app:
     build:
       dockerfile: Dockerfile
-    image: ecsypno/codename-rkn
-    working_dir: /home/codename-rkn
+    image: ecsypno/apex-recon
+    working_dir: /home/apex-recon
     stdin_open: true # docker run -i
     tty: true        # docker run -t
     ports:

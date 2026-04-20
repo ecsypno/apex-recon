@@ -13,20 +13,20 @@ Prerequisites:
 * [Docker Compose](https://docs.docker.com/compose/)
 
 ```bash
-git clone https://github.com/codename-rkn/installer.git codename-rkn-installer
-cd codename-rkn-installer
+git clone https://github.com/ecsypno/apex-recon.git apex-recon
+cd apex-recon
 
 docker compose up -d --build # Start the services.
 # "docker-compose" with the dash may be required on some systems.
 
-docker exec -it codename-rkn-app-1 bash # Connect to the container.
+docker exec -it apex-recon-app-1 bash # Connect to the container.
 
 # From within the container:
 ./setup.sh # Install Apex Recon over the network.
 ```
 _In some Linux distributions, you may need to preface the `docker` commands with `sudo`._
 
-You can now run Apex Recon by using the executables under the `rkn-v*/bin` directory.
+You can now run Apex Recon by using the executables under the `apex-recon-v*/bin` directory.
 
 1. For a CLI scan you can run `bin/rkn URL`.
 2. You can use Apex Recon Pro by running `bin/rkn_pro`.
@@ -93,7 +93,7 @@ From the Apex Recon package directory:
 
 ## Manual installation
 
-1. Download the [latest package](https://github.com/codename-rkn/installer/releases).
+1. Download the [latest package](https://github.com/ecsypno/apex-recon/releases).
 2. Extract.
 
 
