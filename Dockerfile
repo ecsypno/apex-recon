@@ -6,7 +6,7 @@ RUN useradd -m -u 1234 -g apex-recon-group apex-recon
 
 USER apex-recon
  
-WORKDIR /home/apex-recon
+WORKDIR /home/apex-recon-dir
 
 RUN mkdir .rkn
 RUN echo '#!/usr/bin/env bash' > ./setup.sh
