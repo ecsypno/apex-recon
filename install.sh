@@ -338,6 +338,7 @@ under_maintenance() {
 
 reserved="
     rkn
+    apex-recon
 "
 cwd="$(basename `pwd`)"
 
