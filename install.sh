@@ -352,7 +352,7 @@ done
 
 print_eula
 
-latest_version=`curl -sL https://api.github.com/repos/ecsypno/apex-recon/releases/latest | grep -oP '(?<="tag_name": ")[^"]+'
+latest_version=`curl -sL https://api.github.com/repos/ecsypno/apex-recon/releases/latest | grep -oP '(?<="tag_name": ")[^"]+'`
 rkn_url="https://github.com/ecsypno/apex-recon/releases/download/$latest_version/apex-recon-v$latest_version-$(operating_system)-$(architecture).tar.gz"
 rkn_dir="./apex-recon-v$latest_version"
 rkn_package="./apex-recon-v$latest_version.tar.gz"
