@@ -428,7 +428,7 @@ rkn_edition=`$rkn_dir/bin/rkn_edition`
 if [[ $rkn_edition == "dev" || $rkn_edition == "trial" || $rkn_edition == "pro" || $rkn_edition == "enterprise" ]]; then
   if [ "$update" = true ]; then
       echo -n "   * Updating the DB..."
-      $rkn_dir/bin/rkn_pro_task db:migrate 2>> $log 1>> $log
+      $rkn_dir/bin/rkn_pro_task db:migrate db:seed 2>> $log 1>> $log
       handle_failure
   else
       echo -n "   * Setting up the DB..."
