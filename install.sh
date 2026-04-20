@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 cat<<EOF
-                      Codename RKN installer
+                      Apex Recon installer
 -------------------------------------------------------------------------
 
 EOF
@@ -38,15 +38,15 @@ version() {
 
 print_eula() {
     less --prompt="Hit SPACE to move to next page" --quit-at-eof <<EOF
-Codename RKN Terms & Conditions of Supply
+Apex Recon Terms & Conditions of Supply
 
 IMPORTANT NOTICE: PLEASE READ THE FOLLOWING TERMS BEFORE ORDERING OR DOWNLOADING ANY SOFTWARE FROM THIS WEBSITE AS APPLICABLE TO THE LICENCE AND USE OF THAT SOFTWARE.
 
-These Codename RKN Terms & Conditions of Supply together with the documents referred to in it ("Terms") constitute the terms and conditions on which Ecsypno Single Member P.C. ("Licensor") will grant to any purchaser or user ("Licensee") a licence to use the software comprising Codename RKN ("Codename RKN" or the "Software"), following acceptance of an order as detailed below.
+These Apex Recon Terms & Conditions of Supply together with the documents referred to in it ("Terms") constitute the terms and conditions on which Ecsypno Single Member P.C. ("Licensor") will grant to any purchaser or user ("Licensee") a licence to use the software comprising Apex Recon ("Apex Recon" or the "Software"), following acceptance of an order as detailed below.
 
 The following expressly form part of the Terms:
 
-- The Codename RKN License Agreement;
+- The Apex Recon License Agreement;
 
 - The General Terms and Conditions;
 
@@ -56,31 +56,31 @@ The following expressly form part of the Terms:
 
 The Terms apply to the exclusion of any other terms that the Licensee seeks to impose or incorporate, or which are implied by trade, custom, practice or course of dealing.
 
-1. Licenses to Codename RKN are available for purchase via the Licensor's website at https://ecsypno.com/products/codename-rkn.
+1. Licenses to Apex Recon are available for purchase via the Licensor's website at https://ecsypno.com/products/codename-rkn.
 
-2. Placing an order for Codename RKN or checking "I have read and accept the terms and conditions" on a webform is an offer by the Licensee to purchase a licence to the Software and does not constitute a contract until such time as the Licensor issues an email or web confirmation that the order is accepted by Ecsypno Single Member P.C..  Notwithstanding the foregoing, by installing the Software the Licensee affirms that it agrees to the terms of the License and the Codename RKN terms and conditions of supply, which bind the Licensee and its employees.  The contract will only relate to the Software the Licensee has licensed, as set out in that confirmation or accepted by installing it.  Notwithstanding any other communications between the parties, ordering and/or downloading the Software by the Licensee, or the download of the Software by another party at the instigation of the Licensee, shall constitute conclusive evidence that the Licensee has purchased the Software on the basis of these Terms & Conditions of Supply and Ecsypno Single Member P.C.'s order quotation.
+2. Placing an order for Apex Recon or checking "I have read and accept the terms and conditions" on a webform is an offer by the Licensee to purchase a licence to the Software and does not constitute a contract until such time as the Licensor issues an email or web confirmation that the order is accepted by Ecsypno Single Member P.C..  Notwithstanding the foregoing, by installing the Software the Licensee affirms that it agrees to the terms of the License and the Apex Recon terms and conditions of supply, which bind the Licensee and its employees.  The contract will only relate to the Software the Licensee has licensed, as set out in that confirmation or accepted by installing it.  Notwithstanding any other communications between the parties, ordering and/or downloading the Software by the Licensee, or the download of the Software by another party at the instigation of the Licensee, shall constitute conclusive evidence that the Licensee has purchased the Software on the basis of these Terms & Conditions of Supply and Ecsypno Single Member P.C.'s order quotation.
 
 3. Unless Ecsypno Single Member P.C. has pre-approved the Licensee's purchase on credit in writing (and subject to any additional credit terms that apply to any such approval), payment is required in advance. Shortly after the Licensee makes payment and the order has been accepted by Ecsypno Single Member P.C., the Licensee will receive an email containing instructions enabling the Licensee to log in and download the Licensee's software and licence key.  If the Licensee does not receive this email within 30 minutes of making payment, please email the Licensor, who will investigate the issue and endeavour to respond within one working day. In relation to purchases made on agreed credit terms, Ecsypno reserves the right to charge interest under the Late Payment of Commercial Debts (Interest) Act 1998 on invoiced amounts unpaid by their due date.
 
-4. If the Licensee's license is subject to auto-renewal and the Licensee has provided a valid recurring payment method, then payment will be taken 14 days before the expiry of the then current License Period (as defined in the Codename RKN License Agreement) ("Renewal Payment Date"). Auto-renewal for specific licences can be disabled on the Licensee's account page.
+4. If the Licensee's license is subject to auto-renewal and the Licensee has provided a valid recurring payment method, then payment will be taken 14 days before the expiry of the then current License Period (as defined in the Apex Recon License Agreement) ("Renewal Payment Date"). Auto-renewal for specific licences can be disabled on the Licensee's account page.
 
 5. If the Licensee wishes to cancel its order, please email the Licensor, within 7 days of making payment or payment being taken for auto-renewal licenses, or if the order has been placed on credit, credit having been pre-approved by Ecsypno Single Member P.C., please email the Licensor within 7 days of placing the order, and in each case before the Licensee downloads the software or licence key.  If the Licensee already downloaded the software or licence key, it will not be possible to refund the order.
 
 6. If the Licensee's payment is subject to any tax liability within any jurisdiction (for example, withholding tax) then it bears sole responsibility for meeting this liability, and no deductions must be made in the amount paid to Ecsypno Single Member P.C..  Ecsypno Single Member P.C. does not accept liability for any tax liabilities that may arise from the Licensee's purchase of the Software or any associated services hereunder.
 
-7. When the contract for the purchase of Codename RKN has been concluded, such contract is made for the benefit of the Licensee and Ecsypno Single Member P.C. only and is not intended to benefit, or be enforceable by, anyone else.
+7. When the contract for the purchase of Apex Recon has been concluded, such contract is made for the benefit of the Licensee and Ecsypno Single Member P.C. only and is not intended to benefit, or be enforceable by, anyone else.
 
 8. These Terms (including all the documents referred to in them) are governed by and construed in accordance with Greek Law and submitted to the exclusive jurisdiction of the Greek courts.
 
-Codename RKN License Agreement
+Apex Recon License Agreement
 
 This licence agreement which incorporates the General Terms and Conditions below ("License") forms part of the Terms for the Software, which includes computer software, and the online documentation current at the date of the download of this License and accessible on https://documentation.ecsypno.net/ ("Documentation").
 
-THE DOCUMENTATION CONTAINS THE SYSTEM REQUIREMENTS TO RUN CODENAME RKN.  INTERNET ACCESS IS REQUIRED DURING INSTALLATION TO ACTIVATE THE SOFTWARE.
+THE DOCUMENTATION CONTAINS THE SYSTEM REQUIREMENTS TO RUN Apex Recon.  INTERNET ACCESS IS REQUIRED DURING INSTALLATION TO ACTIVATE THE SOFTWARE.
 
-IF THE LICENSEE DOES NOT AGREE TO THE TERMS OF THE LICENCE AND THE CODENAME RKN TERMS AND CONDITIONS OF SUPPLY, THE LICENSOR IS UNWILLING TO LICENSE THE SOFTWARE TO THE LICENSEE AND (1) THE LICENSEE MUST DISCONTINUE ANY ON-GOING ORDERING PROCESS NOW AND MUST NOT INSTALL THE SOFTWARE; AND/OR (2) WHERE THE SOFTWARE HAS ALREADY BEEN INSTALLED, THE LICENSEE MUST CEASE USING IT IMMEDIATELY.
+IF THE LICENSEE DOES NOT AGREE TO THE TERMS OF THE LICENCE AND THE Apex Recon TERMS AND CONDITIONS OF SUPPLY, THE LICENSOR IS UNWILLING TO LICENSE THE SOFTWARE TO THE LICENSEE AND (1) THE LICENSEE MUST DISCONTINUE ANY ON-GOING ORDERING PROCESS NOW AND MUST NOT INSTALL THE SOFTWARE; AND/OR (2) WHERE THE SOFTWARE HAS ALREADY BEEN INSTALLED, THE LICENSEE MUST CEASE USING IT IMMEDIATELY.
 
-WARNING: CODENAME RKN IS DESIGNED TO TEST FOR SECURITY FLAWS AND CAN DO DAMAGE TO TARGET SYSTEMS DUE TO THE NATURE OF ITS FUNCTIONALITY.  TESTING FOR SECURITY FLAWS INHERENTLY INVOLVES INTERACTING WITH TARGETS IN NON-STANDARD WAYS WHICH CAN CAUSE PROBLEMS IN SOME VULNERABLE TARGETS.  THE LICENSEE MUST TAKE DUE CARE WHEN USING THE SOFTWARE, MUST READ ALL DOCUMENTATION BEFORE USE AND BACK UP TARGET SYSTEMS BEFORE USE.  WHERE THE LICENSEE USES THE SOFTWARE ON PRODUCTION SYSTEMS OR OTHER SYSTEMS, IT EXPRESSLY HEREBY ACCEPTS THE RISK OF DAMAGE AND RISK OF LOSS OF DATA OR LOSS OF USE IN RESPECT OF SUCH DATA AND SYSTEMS AND ACCEPTS THAT IT SHOULD NOT USE THE SOFTWARE ON ANY SYSTEMS FOR WHICH IT DOES NOT ACCEPT THE RISK OF DAMAGE, RISK OF LOSS OF DATA OR LOSS OF USE.
+WARNING: Apex Recon IS DESIGNED TO TEST FOR SECURITY FLAWS AND CAN DO DAMAGE TO TARGET SYSTEMS DUE TO THE NATURE OF ITS FUNCTIONALITY.  TESTING FOR SECURITY FLAWS INHERENTLY INVOLVES INTERACTING WITH TARGETS IN NON-STANDARD WAYS WHICH CAN CAUSE PROBLEMS IN SOME VULNERABLE TARGETS.  THE LICENSEE MUST TAKE DUE CARE WHEN USING THE SOFTWARE, MUST READ ALL DOCUMENTATION BEFORE USE AND BACK UP TARGET SYSTEMS BEFORE USE.  WHERE THE LICENSEE USES THE SOFTWARE ON PRODUCTION SYSTEMS OR OTHER SYSTEMS, IT EXPRESSLY HEREBY ACCEPTS THE RISK OF DAMAGE AND RISK OF LOSS OF DATA OR LOSS OF USE IN RESPECT OF SUCH DATA AND SYSTEMS AND ACCEPTS THAT IT SHOULD NOT USE THE SOFTWARE ON ANY SYSTEMS FOR WHICH IT DOES NOT ACCEPT THE RISK OF DAMAGE, RISK OF LOSS OF DATA OR LOSS OF USE.
 
 1. GRANT AND SCOPE OF LICENCE
 
@@ -88,7 +88,7 @@ WARNING: CODENAME RKN IS DESIGNED TO TEST FOR SECURITY FLAWS AND CAN DO DAMAGE T
 
 1.2. If the License is subject to auto-renewal, a new License Period will commence on the expiry of the previous License Period, subject to successful payment being taken on the Renewal Payment Date. Each subsequent License Period commenced using the auto-renew process will be for the same duration as the previous License Period , unless the Licensor has agreed otherwise with the Licensee in writing.
 
-1.3. Each installation of Codename RKN on an individual computer needs to be activated before it will operate, including subsequent Licenses commenced using auto-renewal. It is recognised that in the course of ordinary usage of the Software, individual users may need to install the product on more than one computer. The number of activations performed for each licence is monitored. The Licensor reserves the right to limit the number of activations allowed per licence, and to prevent further activations if this limit is exceeded.
+1.3. Each installation of Apex Recon on an individual computer needs to be activated before it will operate, including subsequent Licenses commenced using auto-renewal. It is recognised that in the course of ordinary usage of the Software, individual users may need to install the product on more than one computer. The number of activations performed for each licence is monitored. The Licensor reserves the right to limit the number of activations allowed per licence, and to prevent further activations if this limit is exceeded.
 
 1.4. The Licensee may:
 
@@ -351,13 +351,13 @@ done
 
 print_eula
 
-latest_version=`curl -sL https://raw.githubusercontent.com/codename-rkn/version/main/LATEST | tr -d "\r\n"`
-rkn_url="https://github.com/codename-rkn/installer/releases/download/v$latest_version/rkn-v$latest_version-$(operating_system)-$(architecture).tar.gz"
-rkn_dir="./rkn-v$latest_version"
-rkn_package="./rkn-v$latest_version.tar.gz"
+latest_version=`curl -sL https://raw.githubusercontent.com/ecsypno/apex-recon/releases/latest | jq -r '.tag_name' | tr -d "\r\n"`
+rkn_url="https://github.com/ecsypno/apex-recon/releases/download/v$latest_version/apex-recon-v$latest_version-$(operating_system)-$(architecture).tar.gz"
+rkn_dir="./apex-recon-v$latest_version"
+rkn_package="./apex-recon-v$latest_version.tar.gz"
 rkn_db_config="$rkn_dir/.system/rkn-ui-pro/config/database.yml"
 rkn_license_file="$HOME/.rkn/license.key"
-log=./rkn.install.log
+log=./apex-recon.install.log
 
 echo
 
@@ -375,7 +375,7 @@ mkdir -p $HOME/.rkn/pro/config/
 
 if ! [ -f $rkn_license_file ]; then
     echo
-    echo "Codename RKN activation"
+    echo "Apex Recon activation"
     echo "(If you don't have a license key, get one from https://ecsypno.com -- a free Trial edition is available too.)"
     key=""
     read -p "License key: " key
@@ -439,17 +439,17 @@ fi
 
 echo
 echo
-echo -n "Codename RKN installed at:   "
+echo -n "Apex Recon installed at:   "
 echo $rkn_dir
 echo "Installation log at: $log"
 echo
 echo "* For a CLI scan you can run: $rkn_dir/bin/rkn URL"
 
 if [[ $rkn_edition == "dev" || $rkn_edition == "trial" || $rkn_edition == "pro" || $rkn_edition == "enterprise" ]]; then
-  echo "* To use Codename RKN Pro you can run: $rkn_dir/bin/rkn_pro"
+  echo "* To use Apex Recon Pro you can run: $rkn_dir/bin/rkn_pro"
 
   if [[ "$1" != "docker" ]]; then
-    echo "  * For a better experience please setup PostreSQL: https://github.com/codename-rkn/installer#postgresql"
+    echo "  * For a better experience please setup PostreSQL: https://github.com/ecsypno/apex-recon#postgresql"
   fi
 fi
 

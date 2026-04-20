@@ -1,6 +1,6 @@
-# Codename RKN Installer
+# Apex Recon Installer
 
-Installation instructions for [Codename RKN](https://ecsypno.com/pages/codename-rkn):
+Installation instructions for [Apex Recon](https://ecsypno.com/pages/codename-rkn):
 
 * [Docker installation](#docker-installation) -- for Mac OSX, Linux and MS Windows. _(recommended)_
 * [Automated installation](#automated-installation) -- For Linux.
@@ -22,14 +22,14 @@ docker compose up -d --build # Start the services.
 docker exec -it codename-rkn-app-1 bash # Connect to the container.
 
 # From within the container:
-./setup.sh # Install Codename RKN over the network.
+./setup.sh # Install Apex Recon over the network.
 ```
 _In some Linux distributions, you may need to preface the `docker` commands with `sudo`._
 
-You can now run Codename RKN by using the executables under the `rkn-v*/bin` directory.
+You can now run Apex Recon by using the executables under the `rkn-v*/bin` directory.
 
 1. For a CLI scan you can run `bin/rkn URL`.
-2. You can use Codename RKN Pro by running `bin/rkn_pro`.
+2. You can use Apex Recon Pro by running `bin/rkn_pro`.
 
 For more information please consult the [documentation](https://documentation.ecsypno.com/rkn/).
 
@@ -52,16 +52,16 @@ To install run the following command in a terminal of your choice:
 bash -c "$(curl -sSL https://get.ecsypno.com/rkn)"
 ```
 
-You can now run Codename RKN by using the executables under the `bin/` directory.
+You can now run Apex Recon by using the executables under the `bin/` directory.
 
-* You can use Codename RKN Pro by running `bin/rkn_pro`
+* You can use Apex Recon Pro by running `bin/rkn_pro`
    * Setting up PostgreSQL is recommended for production workloads.
 
 For more information please consult the [documentation](https://documentation.ecsypno.com/rkn/).
 
 ### PostgreSQL
 
-For a more reliable Codename RKN Pro experience, it's best to configure it to use PostgreSQL.
+For a more reliable Apex Recon Pro experience, it's best to configure it to use PostgreSQL.
 
 Please exchange `secret` with a secure password in the role creation commands.
 
@@ -87,7 +87,7 @@ Now edit `~/.rkn/pro/config/database.yml` to change the password from `secret`.
 
 #### Setup
 
-From the Codename RKN package directory:
+From the Apex Recon package directory:
 
     bin/rkn_pro_task db:create db:migrate db:seed
 
@@ -97,15 +97,15 @@ From the Codename RKN package directory:
 2. Extract.
 
 
-You can now run Codename RKN by using the executables under the `bin/` directory.
+You can now run Apex Recon by using the executables under the `bin/` directory.
 
 For more information please consult the [documentation](https://documentation.ecsypno.com/rkn/).
 
-### Codename RKN Pro (WebUI)
+### Apex Recon Pro (WebUI)
 
-You can run Codename RKN Pro by running `bin/rkn_pro`.
+You can run Apex Recon Pro by running `bin/rkn_pro`.
 
-If you'd like to use the Codename RKN WebUI, its database will need to be prepared.
+If you'd like to use the Apex Recon WebUI, its database will need to be prepared.
 
 Out of the box, the WebUI comes configured with [SQLite](https://sqlite.org/index.html), however,
 for better results and performance please switch to [PostgreSQL](https://www.postgresql.org/).
