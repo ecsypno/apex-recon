@@ -1,8 +1,6 @@
 name: apex-recon
 services:
   app:
-    build:
-      dockerfile: Dockerfile
     image: ecsypno/apex-recon
     working_dir: /home/apex
     stdin_open: true # docker run -i

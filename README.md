@@ -16,7 +16,8 @@ Prerequisites:
 git clone https://github.com/ecsypno/apex-recon.git apex-recon
 cd apex-recon
 
-docker compose up -d --build # Start the services.
+docker compose pull
+docker compose up -d # Start the services.
 # "docker-compose" with the dash may be required on some systems.
 
 docker exec -it apex-recon-app-1 bash # Connect to the container.
