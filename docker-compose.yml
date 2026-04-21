@@ -4,7 +4,7 @@ services:
     build:
       dockerfile: Dockerfile
     image: ecsypno/apex-recon
-    working_dir: /home/apex-recon
+    working_dir: /home/apex
     stdin_open: true # docker run -i
     tty: true        # docker run -t
     ports:
