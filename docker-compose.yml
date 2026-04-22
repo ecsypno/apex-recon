@@ -2,6 +2,7 @@ name: apex-recon
 services:
   app:
     image: ecsypno/apex-recon
+    platform: linux/amd64
     working_dir: /home/apex
     stdin_open: true # docker run -i
     tty: true        # docker run -t
