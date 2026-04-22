@@ -13,8 +13,7 @@ Prerequisites:
 * [Docker Compose](https://docs.docker.com/compose/)
 
 ```bash
-git clone https://github.com/ecsypno/apex-recon.git apex-recon
-cd apex-recon
+wget https://raw.githubusercontent.com/ecsypno/apex-recon/refs/heads/main/docker-compose.yml
 
 docker compose pull
 docker compose up -d # Start the services.
