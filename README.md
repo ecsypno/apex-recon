@@ -13,6 +13,7 @@ Prerequisites:
 * [Docker Compose](https://docs.docker.com/compose/)
 
 ```bash
+mkdir apex-recon && cd apex-recon
 wget https://raw.githubusercontent.com/ecsypno/apex-recon/refs/heads/main/docker-compose.yml
 
 docker compose pull
