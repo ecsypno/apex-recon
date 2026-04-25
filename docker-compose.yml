@@ -16,12 +16,8 @@ services:
       POSTGRES_DB: rkn_pro_production
       POSTGRES_USER: rkn-pro
       POSTGRES_PASSWORD: secret
-    volumes:
-      - postgres_data:/var/lib/postgresql/data
     healthcheck:
       test: [ "CMD", "pg_isready", "-q", "-d", "rkn_pro_production", "-U", "rkn-pro" ]
       interval: 1s
       timeout: 5s
       retries: 10
-volumes:
-  postgres_data:
