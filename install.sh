@@ -56,7 +56,7 @@ The following expressly form part of the Terms:
 
 The Terms apply to the exclusion of any other terms that the Licensee seeks to impose or incorporate, or which are implied by trade, custom, practice or course of dealing.
 
-1. Licenses to Apex Recon are available for purchase via the Licensor's website at https://Sarosys OOD.com/products/codename-rkn.
+1. Licenses to Apex Recon are available for purchase via the Licensor's website at https://ecsypno.com/products/codename-rkn.
 
 2. Placing an order for Apex Recon or checking "I have read and accept the terms and conditions" on a webform is an offer by the Licensee to purchase a licence to the Software and does not constitute a contract until such time as the Licensor issues an email or web confirmation that the order is accepted by Sarosys OOD.  Notwithstanding the foregoing, by installing the Software the Licensee affirms that it agrees to the terms of the License and the Apex Recon terms and conditions of supply, which bind the Licensee and its employees.  The contract will only relate to the Software the Licensee has licensed, as set out in that confirmation or accepted by installing it.  Notwithstanding any other communications between the parties, ordering and/or downloading the Software by the Licensee, or the download of the Software by another party at the instigation of the Licensee, shall constitute conclusive evidence that the Licensee has purchased the Software on the basis of these Terms & Conditions of Supply and Sarosys OOD's order quotation.
 
@@ -377,7 +377,7 @@ mkdir -p $HOME/.rkn/pro/config/
 if ! [ -f $rkn_license_file ]; then
     echo
     echo "Apex Recon activation"
-    echo "(If you don't have a license key, get one from https://Sarosys OOD.com -- a free Trial edition is available too.)"
+    echo "(If you don't have a license key, get one from https://ecsypno.com -- a free Trial edition is available too.)"
     key=""
     read -p "License key: " key
     $rkn_dir/bin/rkn_activate $key
