@@ -352,8 +352,8 @@ done
 
 print_eula
 
-latest_version=`curl -sL https://api.github.com/repos/Sarosys OOD/apex-recon/releases/latest | grep -oP '(?<="tag_name": ")[^"]+' | tr -d "\r\n"`
-rkn_url="https://github.com/Sarosys OOD/apex-recon/releases/download/$latest_version/apex-recon-v$latest_version-$(operating_system)-$(architecture).tar.gz"
+latest_version=`curl -sL https://api.github.com/repos/ecsypno/apex-recon/releases/latest | grep -oP '(?<="tag_name": ")[^"]+' | tr -d "\r\n"`
+rkn_url="https://github.com/ecsypno/apex-recon/releases/download/$latest_version/apex-recon-v$latest_version-$(operating_system)-$(architecture).tar.gz"
 rkn_dir="./apex-recon-v$latest_version"
 rkn_package="./apex-recon-v$latest_version.tar.gz"
 rkn_db_config="$rkn_dir/.system/rkn-ui-pro/config/database.yml"
@@ -450,7 +450,7 @@ if [[ $rkn_edition == "dev" || $rkn_edition == "trial" || $rkn_edition == "pro" 
   echo "* To use Apex Recon Pro you can run: $rkn_dir/bin/rkn_pro"
 
   if [[ "$1" != "docker" ]]; then
-    echo "  * For a better experience please setup PostreSQL: https://github.com/Sarosys OOD/apex-recon#postgresql"
+    echo "  * For a better experience please setup PostreSQL: https://github.com/ecsypno/apex-recon#postgresql"
   fi
 fi
 
