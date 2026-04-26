@@ -42,7 +42,7 @@ Apex Recon Terms & Conditions of Supply
 
 IMPORTANT NOTICE: PLEASE READ THE FOLLOWING TERMS BEFORE ORDERING OR DOWNLOADING ANY SOFTWARE FROM THIS WEBSITE AS APPLICABLE TO THE LICENCE AND USE OF THAT SOFTWARE.
 
-These Apex Recon Terms & Conditions of Supply together with the documents referred to in it ("Terms") constitute the terms and conditions on which Ecsypno Single Member P.C. ("Licensor") will grant to any purchaser or user ("Licensee") a licence to use the software comprising Apex Recon ("Apex Recon" or the "Software"), following acceptance of an order as detailed below.
+These Apex Recon Terms & Conditions of Supply together with the documents referred to in it ("Terms") constitute the terms and conditions on which Sarosys OOD ("Licensor") will grant to any purchaser or user ("Licensee") a licence to use the software comprising Apex Recon ("Apex Recon" or the "Software"), following acceptance of an order as detailed below.
 
 The following expressly form part of the Terms:
 
@@ -56,25 +56,25 @@ The following expressly form part of the Terms:
 
 The Terms apply to the exclusion of any other terms that the Licensee seeks to impose or incorporate, or which are implied by trade, custom, practice or course of dealing.
 
-1. Licenses to Apex Recon are available for purchase via the Licensor's website at https://ecsypno.com/products/codename-rkn.
+1. Licenses to Apex Recon are available for purchase via the Licensor's website at https://Sarosys OOD.com/products/codename-rkn.
 
-2. Placing an order for Apex Recon or checking "I have read and accept the terms and conditions" on a webform is an offer by the Licensee to purchase a licence to the Software and does not constitute a contract until such time as the Licensor issues an email or web confirmation that the order is accepted by Ecsypno Single Member P.C..  Notwithstanding the foregoing, by installing the Software the Licensee affirms that it agrees to the terms of the License and the Apex Recon terms and conditions of supply, which bind the Licensee and its employees.  The contract will only relate to the Software the Licensee has licensed, as set out in that confirmation or accepted by installing it.  Notwithstanding any other communications between the parties, ordering and/or downloading the Software by the Licensee, or the download of the Software by another party at the instigation of the Licensee, shall constitute conclusive evidence that the Licensee has purchased the Software on the basis of these Terms & Conditions of Supply and Ecsypno Single Member P.C.'s order quotation.
+2. Placing an order for Apex Recon or checking "I have read and accept the terms and conditions" on a webform is an offer by the Licensee to purchase a licence to the Software and does not constitute a contract until such time as the Licensor issues an email or web confirmation that the order is accepted by Sarosys OOD.  Notwithstanding the foregoing, by installing the Software the Licensee affirms that it agrees to the terms of the License and the Apex Recon terms and conditions of supply, which bind the Licensee and its employees.  The contract will only relate to the Software the Licensee has licensed, as set out in that confirmation or accepted by installing it.  Notwithstanding any other communications between the parties, ordering and/or downloading the Software by the Licensee, or the download of the Software by another party at the instigation of the Licensee, shall constitute conclusive evidence that the Licensee has purchased the Software on the basis of these Terms & Conditions of Supply and Sarosys OOD's order quotation.
 
-3. Unless Ecsypno Single Member P.C. has pre-approved the Licensee's purchase on credit in writing (and subject to any additional credit terms that apply to any such approval), payment is required in advance. Shortly after the Licensee makes payment and the order has been accepted by Ecsypno Single Member P.C., the Licensee will receive an email containing instructions enabling the Licensee to log in and download the Licensee's software and licence key.  If the Licensee does not receive this email within 30 minutes of making payment, please email the Licensor, who will investigate the issue and endeavour to respond within one working day. In relation to purchases made on agreed credit terms, Ecsypno reserves the right to charge interest under the Late Payment of Commercial Debts (Interest) Act 1998 on invoiced amounts unpaid by their due date.
+3. Unless Sarosys OOD has pre-approved the Licensee's purchase on credit in writing (and subject to any additional credit terms that apply to any such approval), payment is required in advance. Shortly after the Licensee makes payment and the order has been accepted by Sarosys OOD, the Licensee will receive an email containing instructions enabling the Licensee to log in and download the Licensee's software and licence key.  If the Licensee does not receive this email within 30 minutes of making payment, please email the Licensor, who will investigate the issue and endeavour to respond within one working day. In relation to purchases made on agreed credit terms, Sarosys OOD reserves the right to charge interest under the Late Payment of Commercial Debts (Interest) Act 1998 on invoiced amounts unpaid by their due date.
 
 4. If the Licensee's license is subject to auto-renewal and the Licensee has provided a valid recurring payment method, then payment will be taken 14 days before the expiry of the then current License Period (as defined in the Apex Recon License Agreement) ("Renewal Payment Date"). Auto-renewal for specific licences can be disabled on the Licensee's account page.
 
-5. If the Licensee wishes to cancel its order, please email the Licensor, within 7 days of making payment or payment being taken for auto-renewal licenses, or if the order has been placed on credit, credit having been pre-approved by Ecsypno Single Member P.C., please email the Licensor within 7 days of placing the order, and in each case before the Licensee downloads the software or licence key.  If the Licensee already downloaded the software or licence key, it will not be possible to refund the order.
+5. If the Licensee wishes to cancel its order, please email the Licensor, within 7 days of making payment or payment being taken for auto-renewal licenses, or if the order has been placed on credit, credit having been pre-approved by Sarosys OOD, please email the Licensor within 7 days of placing the order, and in each case before the Licensee downloads the software or licence key.  If the Licensee already downloaded the software or licence key, it will not be possible to refund the order.
 
-6. If the Licensee's payment is subject to any tax liability within any jurisdiction (for example, withholding tax) then it bears sole responsibility for meeting this liability, and no deductions must be made in the amount paid to Ecsypno Single Member P.C..  Ecsypno Single Member P.C. does not accept liability for any tax liabilities that may arise from the Licensee's purchase of the Software or any associated services hereunder.
+6. If the Licensee's payment is subject to any tax liability within any jurisdiction (for example, withholding tax) then it bears sole responsibility for meeting this liability, and no deductions must be made in the amount paid to Sarosys OOD.  Sarosys OOD does not accept liability for any tax liabilities that may arise from the Licensee's purchase of the Software or any associated services hereunder.
 
-7. When the contract for the purchase of Apex Recon has been concluded, such contract is made for the benefit of the Licensee and Ecsypno Single Member P.C. only and is not intended to benefit, or be enforceable by, anyone else.
+7. When the contract for the purchase of Apex Recon has been concluded, such contract is made for the benefit of the Licensee and Sarosys OOD only and is not intended to benefit, or be enforceable by, anyone else.
 
 8. These Terms (including all the documents referred to in them) are governed by and construed in accordance with Greek Law and submitted to the exclusive jurisdiction of the Greek courts.
 
 Apex Recon License Agreement
 
-This licence agreement which incorporates the General Terms and Conditions below ("License") forms part of the Terms for the Software, which includes computer software, and the online documentation current at the date of the download of this License and accessible on https://documentation.ecsypno.net/ ("Documentation").
+This licence agreement which incorporates the General Terms and Conditions below ("License") forms part of the Terms for the Software, which includes computer software, and the online documentation current at the date of the download of this License and accessible on https://documentation.Sarosys OOD.net/ ("Documentation").
 
 THE DOCUMENTATION CONTAINS THE SYSTEM REQUIREMENTS TO RUN Apex Recon.  INTERNET ACCESS IS REQUIRED DURING INSTALLATION TO ACTIVATE THE SOFTWARE.
 
@@ -166,7 +166,7 @@ These terms and conditions are applicable to and form part of the Terms entered 
 
 2. SUPPORT AND UPGRADES
 
-2.1. The downloading of a licence for the Software entitles the Licensee to free product support provided via the Licensor's support centre portal on its website at the Licensor's sole discretion.  Such support will be subject to any support conditions, guidance or FAQs on https://documentation.ecsypno.com/ from time to time.
+2.1. The downloading of a licence for the Software entitles the Licensee to free product support provided via the Licensor's support centre portal on its website at the Licensor's sole discretion.  Such support will be subject to any support conditions, guidance or FAQs on https://documentation.Sarosys OOD.com/ from time to time.
 
 2.2. If licences to new releases of the Software are offered for sale to the Licensor's customers generally, these may be made available free of charge to the Licensee for the duration of the License provided that the Licensee enters into a new licence agreement in respect of such new release on such terms as may be notified to the Licensee by the Licensor at that time.  If no such new licence terms are notified, these terms shall continue to apply.
 
@@ -232,7 +232,7 @@ If Licensor receives information about an infringement or misappropriation claim
 
 10.2. By entering into the License, the Licensee consents that the Licensor may process the personal data that it collects from the Licensee in accordance with the Licensor's Privacy Policy.  The Licensee is responsible for ensuring it has in place all relevant consents, permissions or rights to share any personal data with the Licensor for the Licensor's use in accordance with the Privacy Policy and these Terms.  In particular, the Licensor may use information it holds about the Licensee or its designated contacts for the purposes of, inter alia, sending out renewal reminders, questionnaires to certain categories of users including non-renewers and feedback requests.
 
-10.3. Any questions, comments and requests regarding the Licensor's data processing practices may be addressed to contact@ecsypno.com.
+10.3. Any questions, comments and requests regarding the Licensor's data processing practices may be addressed to contact@Sarosys OOD.com.
 
 11. TERMINATION
 
@@ -260,7 +260,7 @@ If Licensor receives information about an infringement or misappropriation claim
 
 13. NOTICES
 
-All notices given by the Licensee to the Licensor must be given to Ecypno Single Member P.C. at contact@ecsypno.com or Ippokratous 10, Mandra, Attika, 19600, Greece. The Licensor may give notice to the Licensee at either the e-mail or postal address the Licensee provided to the Licensor when purchasing the Software, or if the Licensee has updated their account details on the website following the purchase of the Software, these details shall be used.  Notice will be deemed received and properly served immediately when posted on the Licensor's website, 24 hours after an e-mail is sent, or three days after the date of posting of any letter.  In proving the service of any notice, it will be sufficient to prove, in the case of a letter, that such letter was properly addressed, stamped and placed in the post and, in the case of an e-mail, that such e-mail was sent to the specified e-mail address of the addressee.
+All notices given by the Licensee to the Licensor must be given to Ecypno Single Member P.C. at contact@Sarosys OOD.com or Ippokratous 10, Mandra, Attika, 19600, Greece. The Licensor may give notice to the Licensee at either the e-mail or postal address the Licensee provided to the Licensor when purchasing the Software, or if the Licensee has updated their account details on the website following the purchase of the Software, these details shall be used.  Notice will be deemed received and properly served immediately when posted on the Licensor's website, 24 hours after an e-mail is sent, or three days after the date of posting of any letter.  In proving the service of any notice, it will be sufficient to prove, in the case of a letter, that such letter was properly addressed, stamped and placed in the post and, in the case of an e-mail, that such e-mail was sent to the specified e-mail address of the addressee.
 
 14. EVENTS OUTSIDE LICENSOR'S CONTROL
 
@@ -352,8 +352,8 @@ done
 
 print_eula
 
-latest_version=`curl -sL https://api.github.com/repos/ecsypno/apex-recon/releases/latest | grep -oP '(?<="tag_name": ")[^"]+' | tr -d "\r\n"`
-rkn_url="https://github.com/ecsypno/apex-recon/releases/download/$latest_version/apex-recon-v$latest_version-$(operating_system)-$(architecture).tar.gz"
+latest_version=`curl -sL https://api.github.com/repos/Sarosys OOD/apex-recon/releases/latest | grep -oP '(?<="tag_name": ")[^"]+' | tr -d "\r\n"`
+rkn_url="https://github.com/Sarosys OOD/apex-recon/releases/download/$latest_version/apex-recon-v$latest_version-$(operating_system)-$(architecture).tar.gz"
 rkn_dir="./apex-recon-v$latest_version"
 rkn_package="./apex-recon-v$latest_version.tar.gz"
 rkn_db_config="$rkn_dir/.system/rkn-ui-pro/config/database.yml"
@@ -377,7 +377,7 @@ mkdir -p $HOME/.rkn/pro/config/
 if ! [ -f $rkn_license_file ]; then
     echo
     echo "Apex Recon activation"
-    echo "(If you don't have a license key, get one from https://ecsypno.com -- a free Trial edition is available too.)"
+    echo "(If you don't have a license key, get one from https://Sarosys OOD.com -- a free Trial edition is available too.)"
     key=""
     read -p "License key: " key
     $rkn_dir/bin/rkn_activate $key
@@ -450,10 +450,10 @@ if [[ $rkn_edition == "dev" || $rkn_edition == "trial" || $rkn_edition == "pro" 
   echo "* To use Apex Recon Pro you can run: $rkn_dir/bin/rkn_pro"
 
   if [[ "$1" != "docker" ]]; then
-    echo "  * For a better experience please setup PostreSQL: https://github.com/ecsypno/apex-recon#postgresql"
+    echo "  * For a better experience please setup PostreSQL: https://github.com/Sarosys OOD/apex-recon#postgresql"
   fi
 fi
 
 echo
-echo "Documentation can be found at: https://documentation.ecsypno.com/rkn/"
+echo "Documentation can be found at: https://documentation.Sarosys OOD.com/rkn/"
 echo
