@@ -166,7 +166,7 @@ These terms and conditions are applicable to and form part of the Terms entered 
 
 2. SUPPORT AND UPGRADES
 
-2.1. The downloading of a licence for the Software entitles the Licensee to free product support provided via the Licensor's support centre portal on its website at the Licensor's sole discretion.  Such support will be subject to any support conditions, guidance or FAQs on https://documentation.Sarosys OOD.com/ from time to time.
+2.1. The downloading of a licence for the Software entitles the Licensee to free product support provided via the Licensor's support centre portal on its website at the Licensor's sole discretion.  Such support will be subject to any support conditions, guidance or FAQs on https://documentation.ecsypno.com/ from time to time.
 
 2.2. If licences to new releases of the Software are offered for sale to the Licensor's customers generally, these may be made available free of charge to the Licensee for the duration of the License provided that the Licensee enters into a new licence agreement in respect of such new release on such terms as may be notified to the Licensee by the Licensor at that time.  If no such new licence terms are notified, these terms shall continue to apply.
 
@@ -232,7 +232,7 @@ If Licensor receives information about an infringement or misappropriation claim
 
 10.2. By entering into the License, the Licensee consents that the Licensor may process the personal data that it collects from the Licensee in accordance with the Licensor's Privacy Policy.  The Licensee is responsible for ensuring it has in place all relevant consents, permissions or rights to share any personal data with the Licensor for the Licensor's use in accordance with the Privacy Policy and these Terms.  In particular, the Licensor may use information it holds about the Licensee or its designated contacts for the purposes of, inter alia, sending out renewal reminders, questionnaires to certain categories of users including non-renewers and feedback requests.
 
-10.3. Any questions, comments and requests regarding the Licensor's data processing practices may be addressed to contact@Sarosys OOD.com.
+10.3. Any questions, comments and requests regarding the Licensor's data processing practices may be addressed to contact@ecsypno.com.
 
 11. TERMINATION
 
@@ -260,7 +260,7 @@ If Licensor receives information about an infringement or misappropriation claim
 
 13. NOTICES
 
-All notices given by the Licensee to the Licensor must be given to Ecypno Single Member P.C. at contact@Sarosys OOD.com or Ippokratous 10, Mandra, Attika, 19600, Greece. The Licensor may give notice to the Licensee at either the e-mail or postal address the Licensee provided to the Licensor when purchasing the Software, or if the Licensee has updated their account details on the website following the purchase of the Software, these details shall be used.  Notice will be deemed received and properly served immediately when posted on the Licensor's website, 24 hours after an e-mail is sent, or three days after the date of posting of any letter.  In proving the service of any notice, it will be sufficient to prove, in the case of a letter, that such letter was properly addressed, stamped and placed in the post and, in the case of an e-mail, that such e-mail was sent to the specified e-mail address of the addressee.
+All notices given by the Licensee to the Licensor must be given to Ecypno Single Member P.C. at contact@ecsypno.com or Ippokratous 10, Mandra, Attika, 19600, Greece. The Licensor may give notice to the Licensee at either the e-mail or postal address the Licensee provided to the Licensor when purchasing the Software, or if the Licensee has updated their account details on the website following the purchase of the Software, these details shall be used.  Notice will be deemed received and properly served immediately when posted on the Licensor's website, 24 hours after an e-mail is sent, or three days after the date of posting of any letter.  In proving the service of any notice, it will be sufficient to prove, in the case of a letter, that such letter was properly addressed, stamped and placed in the post and, in the case of an e-mail, that such e-mail was sent to the specified e-mail address of the addressee.
 
 14. EVENTS OUTSIDE LICENSOR'S CONTROL
 
@@ -455,5 +455,5 @@ if [[ $rkn_edition == "dev" || $rkn_edition == "trial" || $rkn_edition == "pro" 
 fi
 
 echo
-echo "Documentation can be found at: https://documentation.Sarosys OOD.com/rkn/"
+echo "Documentation can be found at: https://documentation.ecsypno.com/rkn/"
 echo
