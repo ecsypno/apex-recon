@@ -383,7 +383,7 @@ if ! [ -f $rkn_license_file ]; then
     $rkn_dir/bin/rkn_activate $key
 
     if [[ $? != 0 ]]; then
-        echo "Activation was unsuccessful, please retry the installation process with a valid license key."
+        echo "Activation was unsuccessful, contact support if you believe this to be a bug."
         exit 1
     fi
 
