@@ -96,7 +96,7 @@ From the Apex Recon package directory:
 
 1. Download the [latest package](https://github.com/ecsypno/apex-recon/releases).
 2. Extract.
-
+3. Activate: `bin/rkn_activate [LICENSE_KEY]`
 
 You can now run Apex Recon by using the executables under the `bin/` directory.
 
