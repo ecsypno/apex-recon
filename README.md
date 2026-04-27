@@ -111,6 +111,18 @@ If you'd like to use the Apex Recon WebUI, its database will need to be prepared
 Out of the box, the WebUI comes configured with [SQLite](https://sqlite.org/index.html), however,
 for better results and performance please switch to [PostgreSQL](https://www.postgresql.org/).
 
+#### Setup
+
+If this is a fresh installation, you can setup a DB with:
+
+    ./bin/rkn_pro_task db:create db:migrate db:seed
+
+#### Update
+
+If you'd like to update an existing installation you can do it with:
+
+    ./bin/rkn_pro_task db:migrate
+
 #### PostgreSQL
 
 ##### Configuration
@@ -138,18 +150,6 @@ cp .system/rkn-ui-pro/config/database.postgres.yml .system/rkn-ui-pro/config/dat
 ```
 
 Now edit `.system/rkn-ui-pro/config/database.yml` to change the password from `secret`.
-
-#### Setup
-
-If this is a fresh installation, you can setup a DB with:
-
-    ./bin/rkn_pro_task db:create db:migrate db:seed
-
-#### Update
-
-If you'd like to update an existing installation you can do it with:
-
-    ./bin/rkn_pro_task db:migrate
 
 ## Dependencies for headless environments or WSL
 
