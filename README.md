@@ -2,12 +2,12 @@
 
 Installation instructions for [Apex Recon](https://ecsypno.com/pages/codename-rkn):
 
-* [Docker installation](#docker-installation)
+* [Docker installation](#docker-installation) -- for Mac OSX, Linux and MS Windows. (recommended)
     * [Updating](#updating)
     * [Caution!](#caution)
-* [Automated installation](#automated-installation)
+* [Automated installation](#automated-installation) -- for Linux. 
     * [PostgreSQL](#postgresql)
-* [Manual installation](#manual-installation)
+* [Manual installation](#manual-installation) -- for Linux.
     * [Apex Recon Pro (WebUI)](#apex-recon-pro-webui)
 * [Dependencies for headless environments or WSL](#dependencies-for-headless-environments-or-wsl)
 
