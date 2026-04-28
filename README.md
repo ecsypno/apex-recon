@@ -10,7 +10,6 @@ Installation instructions for [Apex Recon](https://ecsypno.com/pages/codename-rk
 * [Manual installation](#manual-installation)
     * [Apex Recon Pro (WebUI)](#apex-recon-pro-webui)
 * [Dependencies for headless environments or WSL](#dependencies-for-headless-environments-or-wsl)
-* [License](#license)
 
 ## Docker installation
 
