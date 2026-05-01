@@ -18,7 +18,7 @@ Prerequisites:
 
 ```bash
 mkdir apex-recon && cd apex-recon
-wget https://raw.githubusercontent.com/ecsypno/apex-recon/refs/heads/main/docker-compose.yml
+curl -sSL https://compose.apex-recon.sh > docker-compose.yml
 
 docker compose pull
 docker compose up -d # Start the services.
@@ -54,7 +54,7 @@ data.
 To install run the following command in a terminal of your choice:
 
 ```bash
-bash -c "$(curl -sSL https://get.ecsypno.com/rkn)"
+bash -c "$(curl -sSL https://apex-recon.sh)"
 ```
 
 You can now run Apex Recon by using the executables under the `bin/` directory.
