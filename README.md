@@ -94,7 +94,7 @@ Now edit `~/.rkn/pro/config/database.yml` to change the password from `secret`.
 
 From the Apex Recon package directory:
 
-    bin/rkn_pro_task db:create db:migrate db:seed
+    bin/rkn_pro_task db:setup
 
 ## Manual installation
 
@@ -119,7 +119,7 @@ for better results and performance please switch to [PostgreSQL](https://www.pos
 
 If this is a fresh installation, you can setup a DB with:
 
-    ./bin/rkn_pro_task db:create db:schema:load db:seed
+    ./bin/rkn_pro_task db:setup
 
 #### Update
 

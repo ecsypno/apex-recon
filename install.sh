@@ -380,7 +380,7 @@ if ! [ -f $rkn_license_file ]; then
     echo "(If you don't have a license key, get one from https://ecsypno.com -- a free Trial edition is available too.)"
     key=""
     read -p "License key: " key
-    $rkn_dir/bin/rkn_activate $key
+    $rkn_dir/bin/apex_activate $key
 
     if [[ $? != 0 ]]; then
         echo "Activation was unsuccessful, contact support if you believe this to be a bug."
@@ -400,7 +400,7 @@ if [[ "$1" == "docker" ]]; then
   rm -f $rkn_dir/.system/rkn-ui-pro/config/database.yml
   ln -s $HOME/.rkn/pro/config/database.yml $rkn_dir/.system/rkn-ui-pro/config/database.yml
 
-  rkn_pro_user=`$rkn_dir/bin/rkn_pro_script 'puts begin; User.count; rescue =>e; 0; end' 2>> /dev/null`
+  rkn_pro_user=`$rkn_dir/bin/apex_pro_script 'puts begin; User.count; rescue =>e; 0; end' 2>> /dev/null`
   if [[ "$rkn_pro_user" == "1" ]]; then
       update=true
   else
@@ -423,16 +423,16 @@ else
 fi
 
 
-rkn_edition=`$rkn_dir/bin/rkn_edition`
+rkn_edition=`$rkn_dir/bin/apex_edition`
 
 if [[ $rkn_edition == "dev" || $rkn_edition == "trial" || $rkn_edition == "pro" || $rkn_edition == "enterprise" ]]; then
   if [ "$update" = true ]; then
       echo -n "   * Updating the DB..."
-      $rkn_dir/bin/rkn_pro_task db:migrate 2>> $log 1>> $log
+      $rkn_dir/bin/apex_pro_task db:migrate 2>> $log 1>> $log
       handle_failure
   else
       echo -n "   * Setting up the DB..."
-      $rkn_dir/bin/rkn_pro_task db:create db:schema:load db:seed 2>> $log 1>> $log
+      $rkn_dir/bin/apex_pro_task db:setup 2>> $log 1>> $log
       handle_failure
   fi
   echo "done."
@@ -444,10 +444,10 @@ echo -n "Apex Recon installed at:   "
 echo $rkn_dir
 echo "Installation log at: $log"
 echo
-echo "* For a CLI scan you can run: $rkn_dir/bin/rkn URL"
+echo "* For a CLI scan you can run: $rkn_dir/bin/apex URL"
 
 if [[ $rkn_edition == "dev" || $rkn_edition == "trial" || $rkn_edition == "pro" || $rkn_edition == "enterprise" ]]; then
-  echo "* To use Apex Recon Pro you can run: $rkn_dir/bin/rkn_pro"
+  echo "* To use Apex Recon Pro you can run: $rkn_dir/bin/apex_pro"
 
   if [[ "$1" != "docker" ]]; then
     echo "  * For a better experience please setup PostreSQL: https://github.com/ecsypno/apex-recon#postgresql"
