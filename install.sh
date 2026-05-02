@@ -432,7 +432,7 @@ if [[ $rkn_edition == "dev" || $rkn_edition == "trial" || $rkn_edition == "pro" 
       handle_failure
   else
       echo -n "   * Setting up the DB..."
-      $rkn_dir/bin/rkn_pro_task db:create db:migrate db:seed 2>> $log 1>> $log
+      $rkn_dir/bin/rkn_pro_task db:create db:schema:load db:seed 2>> $log 1>> $log
       handle_failure
   fi
   echo "done."
