@@ -9,7 +9,6 @@ USER apex
  
 WORKDIR /home/apex
 
-RUN mkdir .rkn
 RUN echo '#!/usr/bin/env bash' > ./setup.sh
 RUN echo 'bash -c "$(curl -sSL https://apex-recon.sh)"' >> ./setup.sh
 RUN chmod +x ./setup.sh
