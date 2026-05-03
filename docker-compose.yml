@@ -6,20 +6,9 @@ services:
     working_dir: /home/apex
     stdin_open: true # docker run -i
     tty: true        # docker run -t
+    # Keep the container alive without burning an interactive bash as PID 1
+    # (which would prematurely fire ~/.bashrc and the auto-setup block before
+    # the user has a chance to enter via `docker compose exec app bash`).
+    command: ["tail", "-f", "/dev/null"]
     ports:
       - 9292:9292 # Pro WebUI.
-  db:
-    image: postgres
-    restart: always
-    environment:
-      PGUSER: root
-      POSTGRES_DB: rkn_pro_production
-      POSTGRES_USER: rkn-pro
-      POSTGRES_PASSWORD: secret
-    volumes:
-      - ./apex-recon-db:/var/lib/postgresql
-    healthcheck:
-      test: [ "CMD", "pg_isready", "-q", "-d", "rkn_pro_production", "-U", "rkn-pro" ]
-      interval: 1s
-      timeout: 5s
-      retries: 10

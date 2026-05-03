@@ -2,19 +2,14 @@
 
 Installation instructions for [Apex Recon](https://ecsypno.com/pages/codename-rkn):
 
-* [Docker installation](#docker-installation) -- for Mac OSX, Linux and MS Windows. (recommended)
+* [Docker installation](#docker-installation)
     * [Updating](#updating)
     * [Caution!](#caution)
 * [Automated installation](#automated-installation) -- for Linux. 
-    * [PostgreSQL](#postgresql)
 * [Manual installation](#manual-installation) -- for Linux.
-    * [Apex Recon Pro (WebUI)](#apex-recon-pro-webui)
 * [Dependencies for headless environments or WSL](#dependencies-for-headless-environments-or-wsl)
 
 ## Docker installation
-
-Prerequisites:
-* [Docker Compose](https://docs.docker.com/compose/)
 
 ```bash
 mkdir apex-recon && cd apex-recon
@@ -22,19 +17,13 @@ curl -sSL https://compose.apex-recon.sh > docker-compose.yml
 
 docker compose pull
 docker compose up -d # Start the services.
-# "docker-compose" with the dash may be required on some systems.
 
 docker exec -it apex-recon-app-1 bash # Connect to the container.
-
-# From within the container:
-./setup.sh # Install Apex Recon over the network.
 ```
-_In some Linux distributions, you may need to preface the `docker` commands with `sudo`._
-
 You can now run Apex Recon by using the executables under the `apex-recon-v*/bin` directory.
 
-1. For a CLI scan you can run `bin/rkn URL`.
-2. You can use Apex Recon Pro by running `bin/rkn_pro`.
+1. For a CLI scan you can run `bin/apex URL`.
+2. You can use Apex Recon Pro by running `bin/apex_pro`.
 
 For more information please consult the [documentation](https://documentation.ecsypno.com/rkn/).
 
@@ -57,103 +46,25 @@ To install run the following command in a terminal of your choice:
 bash -c "$(curl -sSL https://apex-recon.sh)"
 ```
 
-You can now run Apex Recon by using the executables under the `bin/` directory.
+You can now run Spectre Scan by using the executables under the `spectre-scan-v*/bin` directory.
 
-* You can use Apex Recon Pro by running `bin/rkn_pro`
-   * Setting up PostgreSQL is recommended for production workloads.
+1. For a CLI scan you can run `bin/apex URL`.
+2. You can use Spectre Scan Pro by running `bin/apex_pro`
 
 For more information please consult the [documentation](https://documentation.ecsypno.com/rkn/).
-
-### PostgreSQL
-
-For a more reliable Apex Recon Pro experience, it's best to configure it to use PostgreSQL.
-
-Please exchange `secret` with a secure password in the role creation commands.
-
-#### Role creation
-
-```
-$ sudo -u postgres psql
-postgres=# CREATE USER "rkn-pro" WITH PASSWORD 'secret';
-postgres=# ALTER USER "rkn-pro" superuser;
-```
-
-#### Connection
-
-```
-# Backup SQLite config.
-mv ~/.rkn/pro/config/database.yml ~/.rkn/pro/config/database.yml.bak
-
-# Set to use PostgreSQL config.
-cp ~/.rkn/pro/config/database.postgres.yml ~/.rkn/pro/config/database.yml
-```
-
-Now edit `~/.rkn/pro/config/database.yml` to change the password from `secret`.
-
-#### Setup
-
-From the Apex Recon package directory:
-
-    bin/rkn_pro_task db:setup
 
 ## Manual installation
 
 1. Download the [latest package](https://github.com/ecsypno/apex-recon/releases).
 2. Extract.
-3. Activate: `bin/rkn_activate [LICENSE_KEY]`
+3. Activate: `bin/apex_activate [LICENSE_KEY]`
 
-You can now run Apex Recon by using the executables under the `bin/` directory.
+You can now run Spectre Scan by using the executables under the `spectre-scan-v*/bin` directory.
+
+1. For a CLI scan you can run `bin/apex URL`.
+2. You can use Spectre Scan Pro by running `bin/apex_pro`
 
 For more information please consult the [documentation](https://documentation.ecsypno.com/rkn/).
-
-### Apex Recon Pro (WebUI)
-
-You can run Apex Recon Pro by running `bin/rkn_pro`.
-
-If you'd like to use the Apex Recon WebUI, its database will need to be prepared.
-
-Out of the box, the WebUI comes configured with [SQLite](https://sqlite.org/index.html), however,
-for better results and performance please switch to [PostgreSQL](https://www.postgresql.org/).
-
-#### Setup
-
-If this is a fresh installation, you can setup a DB with:
-
-    ./bin/rkn_pro_task db:setup
-
-#### Update
-
-If you'd like to update an existing installation you can do it with:
-
-    ./bin/rkn_pro_task db:migrate
-
-#### PostgreSQL
-
-##### Configuration
-
-Please exchange `secret` with a secure password in the role creation commands.
-
-###### Role creation
-
-```
-$ sudo -u postgres psql
-postgres=# CREATE USER "rkn-pro" WITH PASSWORD 'secret';
-postgres=# ALTER USER "rkn-pro" superuser;
-```
-
-###### Connection
-
-From the package root directory:
-
-```
-# Backup SQLite config.
-mv .system/rkn-ui-pro/config/database.yml .system/rkn-ui-pro/config/database.yml.bak
-
-# Set to use PostgreSQL config.
-cp .system/rkn-ui-pro/config/database.postgres.yml .system/rkn-ui-pro/config/database.yml
-```
-
-Now edit `.system/rkn-ui-pro/config/database.yml` to change the password from `secret`.
 
 ## Dependencies for headless environments or WSL
 
@@ -161,7 +72,8 @@ For minimal environments such as headless servers or the Windows Subsystem for L
 
 ```
 sudo apt-get update
-sudo apt-get install libgconf-2-4 libatk1.0-0 libatk-bridge2.0-0 libgdk-pixbuf2.0-0 libgtk-3-0 libgbm-dev libnss3-dev libxss-dev libasound2 libicu-dev
+sudo apt-get install -y libgconf-2-4 libatk1.0-0 libatk-bridge2.0-0 \
+  libgdk-pixbuf2.0-0 libgtk-3-0 libgbm-dev libnss3-dev libxss-dev libasound2
 ```
 
 ## License

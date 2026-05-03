@@ -356,7 +356,6 @@ latest_version=`curl -sL https://api.github.com/repos/ecsypno/apex-recon/release
 rkn_url="https://github.com/ecsypno/apex-recon/releases/download/$latest_version/apex-recon-v$latest_version-$(operating_system)-$(architecture).tar.gz"
 rkn_dir="./apex-recon-v$latest_version"
 rkn_package="./apex-recon-v$latest_version.tar.gz"
-rkn_db_config="$rkn_dir/.system/rkn-ui-pro/config/database.yml"
 rkn_license_file="$HOME/.rkn/license.key"
 log=./apex-recon.install.log
 
@@ -371,8 +370,6 @@ tar xf $rkn_package
 handle_failure
 rm $rkn_package
 echo "done."
-
-mkdir -p $HOME/.rkn/pro/config/
 
 if ! [ -f $rkn_license_file ]; then
     echo
@@ -390,55 +387,8 @@ if ! [ -f $rkn_license_file ]; then
     echo
 fi
 
-db_config="$HOME/.rkn/pro/config/database.yml"
-if [[ "$1" == "docker" ]]; then
-
-  if [[ ! -f "$db_config" ]]; then
-      mv $rkn_dir/.system/rkn-ui-pro/config/database.docker.yml $HOME/.rkn/pro/config/database.yml
-  fi
-
-  rm -f $rkn_dir/.system/rkn-ui-pro/config/database.yml
-  ln -s $HOME/.rkn/pro/config/database.yml $rkn_dir/.system/rkn-ui-pro/config/database.yml
-
-  rkn_pro_user=`$rkn_dir/bin/apex_pro_script 'puts begin; User.count; rescue =>e; 0; end' 2>> /dev/null`
-  if [[ "$rkn_pro_user" == "1" ]]; then
-      update=true
-  else
-      update=false
-  fi
-
-else
-
-  update=false
-  if [[ ! -f "$db_config" ]]; then
-      mv $rkn_dir/.system/rkn-ui-pro/config/database.yml $HOME/.rkn/pro/config/
-      mv $rkn_dir/.system/rkn-ui-pro/config/database.postgres.yml $HOME/.rkn/pro/config/
-  else
-      update=true
-  fi
-
-  rm -f $rkn_dir/.system/rkn-ui-pro/config/database.yml
-  ln -s $HOME/.rkn/pro/config/database.yml $rkn_dir/.system/rkn-ui-pro/config/database.yml
-
-fi
-
-
 rkn_edition=`$rkn_dir/bin/apex_edition`
 
-if [[ $rkn_edition == "dev" || $rkn_edition == "trial" || $rkn_edition == "pro" || $rkn_edition == "enterprise" ]]; then
-  if [ "$update" = true ]; then
-      echo -n "   * Updating the DB..."
-      $rkn_dir/bin/apex_pro_task db:migrate 2>> $log 1>> $log
-      handle_failure
-  else
-      echo -n "   * Setting up the DB..."
-      $rkn_dir/bin/apex_pro_task db:setup 2>> $log 1>> $log
-      handle_failure
-  fi
-  echo "done."
-fi
-
-echo
 echo
 echo -n "Apex Recon installed at:   "
 echo $rkn_dir
@@ -448,10 +398,6 @@ echo "* For a CLI scan you can run: $rkn_dir/bin/apex URL"
 
 if [[ $rkn_edition == "dev" || $rkn_edition == "trial" || $rkn_edition == "pro" || $rkn_edition == "enterprise" ]]; then
   echo "* To use Apex Recon Pro you can run: $rkn_dir/bin/apex_pro"
-
-  if [[ "$1" != "docker" ]]; then
-    echo "  * For a better experience please setup PostreSQL: https://github.com/ecsypno/apex-recon#postgresql"
-  fi
 fi
 
 echo
