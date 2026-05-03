@@ -1,5 +1,7 @@
 #!/usr/bin/env bash
 
+set -eo pipefail
+
 cat<<EOF
                       Apex Recon installer
 -------------------------------------------------------------------------
@@ -11,18 +13,9 @@ if (( UID == 0 )); then
     exit 1
 fi
 
-#
-# Checks the last return value and exits with an error message on failure.
-#
-# To be called after each step.
-#
-handle_failure() {
-    rc=$?
-    if [[ $rc != 0 ]] ; then
-        echo "Installation failed, check $log for details."
-        exit $rc
-    fi
-}
+log=./apex-recon.install.log
+
+trap 'rc=$?; echo "Installation failed (rc=$rc). See $log for details." >&2; exit $rc' ERR
 
 operating_system(){
     uname -s | awk '{print tolower($0)}'
@@ -32,12 +25,17 @@ architecture(){
     uname -m
 }
 
-version() {
-    echo "$@" | awk -F. '{ printf("%d%03d%03d%03d\n", $1,$2,$3,$4); }';
-}
-
 print_eula() {
-    less --prompt="Hit SPACE to move to next page" --quit-at-eof <<EOF
+    local pager
+    if command -v less >/dev/null; then
+        pager=(less --prompt="Hit SPACE to move to next page" --quit-at-eof)
+    elif command -v more >/dev/null; then
+        pager=(more)
+    else
+        pager=(cat)
+    fi
+
+    "${pager[@]}" <<EOF
 Apex Recon Terms & Conditions of Supply
 
 IMPORTANT NOTICE: PLEASE READ THE FOLLOWING TERMS BEFORE ORDERING OR DOWNLOADING ANY SOFTWARE FROM THIS WEBSITE AS APPLICABLE TO THE LICENCE AND USE OF THAT SOFTWARE.
@@ -313,7 +311,8 @@ EOF
     read -p "Input \"I AGREE\" to accept: " agree
 
     if [[ "$agree" != "I AGREE" ]]; then
-      exit
+      echo "EULA not accepted, aborting."
+      exit 1
     fi
 
    echo
@@ -331,7 +330,7 @@ fi
 
 under_maintenance() {
     echo "Down for maintenance, will be back up shortly..."
-    exit
+    exit 1
 }
 
 #under_maintenance
@@ -352,34 +351,72 @@ done
 
 print_eula
 
-latest_version=`curl -sL https://api.github.com/repos/ecsypno/apex-recon/releases/latest | grep -oP '(?<="tag_name": ")[^"]+' | tr -d "\r\n"`
-rkn_url="https://github.com/ecsypno/apex-recon/releases/download/$latest_version/apex-recon-v$latest_version-$(operating_system)-$(architecture).tar.gz"
+api_response="$(curl -sL https://api.github.com/repos/ecsypno/apex-recon/releases/latest)"
+echo "GET releases/latest: $api_response" >> "$log"
+
+latest_version="$(echo "$api_response" | grep -oP '(?<="tag_name": ")[^"]+' | tr -d '\r\n' || true)"
+
+if [[ -z "$latest_version" ]]; then
+    if echo "$api_response" | grep -qi "API rate limit exceeded"; then
+        echo "GitHub API rate limit exceeded for your IP. Try again later." >&2
+        exit 1
+    fi
+    under_maintenance
+fi
+
+# GitHub computes a per-asset digest server-side; we use it as the trust
+# anchor instead of uploading a separate hash file. Format: "sha256:<hex>".
+expected_digest="$(echo "$api_response" | grep -oP '(?<="digest": ")[^"]+' | head -1)"
+if [[ -z "$expected_digest" ]]; then
+    echo "[ERROR] Release asset is missing a digest field; refusing to proceed without verification." >&2
+    exit 1
+fi
+
+rkn_archive="apex-recon-v$latest_version-$(operating_system)-$(architecture).tar.gz"
+rkn_url="https://github.com/ecsypno/apex-recon/releases/download/$latest_version/$rkn_archive"
 rkn_dir="./apex-recon-v$latest_version"
-rkn_package="./apex-recon-v$latest_version.tar.gz"
+rkn_package="./$rkn_archive"
 rkn_license_file="$HOME/.rkn/license.key"
-log=./apex-recon.install.log
+
+# Clear any partial state from a prior interrupted attempt so the next steps
+# don't mix old + new files.
+rm -rf "$rkn_dir" "$rkn_package"
 
 echo
 
 echo "   * Downloading..."
-curl -L -C - --retry 12 --retry-delay 1 --retry-all-errors $rkn_url -o $rkn_package
-handle_failure
+curl -fL -C - --retry 12 --retry-delay 1 --retry-all-errors \
+     "$rkn_url" -o "$rkn_package"
+
+echo "   * Verifying..."
+expected_algo="${expected_digest%%:*}"
+expected_hash="${expected_digest#*:}"
+case "$expected_algo" in
+    sha256) actual_hash="$(sha256sum "$rkn_package" | awk '{print $1}')" ;;
+    sha512) actual_hash="$(sha512sum "$rkn_package" | awk '{print $1}')" ;;
+    *) echo "[ERROR] Unsupported digest algorithm '$expected_algo'." >&2; exit 1 ;;
+esac
+echo "expected $expected_digest, got $expected_algo:$actual_hash" >> "$log"
+if [[ "$actual_hash" != "$expected_hash" ]]; then
+    echo "[ERROR] Checksum verification failed — the downloaded archive does not match its published $expected_algo hash." >&2
+    echo "        See $log for details. The download has been removed; do not run it." >&2
+    rm -f "$rkn_package"
+    exit 1
+fi
 
 echo -n "   * Installing..."
-tar xf $rkn_package
-handle_failure
-rm $rkn_package
+tar xf "$rkn_package" 2>>"$log"
+rm -f "$rkn_package"
 echo "done."
 
-if ! [ -f $rkn_license_file ]; then
+if ! [ -f "$rkn_license_file" ]; then
     echo
     echo "Apex Recon activation"
     echo "(If you don't have a license key, get one from https://ecsypno.com -- a free Trial edition is available too.)"
     key=""
     read -p "License key: " key
-    $rkn_dir/bin/apex_activate $key
 
-    if [[ $? != 0 ]]; then
+    if ! "$rkn_dir/bin/apex_activate" "$key"; then
         echo "Activation was unsuccessful, contact support if you believe this to be a bug."
         exit 1
     fi
@@ -387,7 +424,11 @@ if ! [ -f $rkn_license_file ]; then
     echo
 fi
 
-rkn_edition=`$rkn_dir/bin/apex_edition`
+if [[ -x "$rkn_dir/bin/apex_edition" ]]; then
+    rkn_edition="$("$rkn_dir/bin/apex_edition")"
+else
+    rkn_edition="unknown"
+fi
 
 echo
 echo -n "Apex Recon installed at:   "
