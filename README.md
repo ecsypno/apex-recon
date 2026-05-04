@@ -97,6 +97,13 @@ behind proxies, with separate disks, or in air-gapped environments.
 | `APEX_ENGINE_LOG_DIR` | `$APEX_HOME/logs/engine` | Engine-side run logs. |
 | `APEX_PRO_LOG_DIR` | `$APEX_HOME/logs/pro` | Apex Recon Pro (Rails) + bundled PostgreSQL logs. |
 
+### Engine output
+
+| Variable | Default | What it does |
+|---|---|---|
+| `APEX_ENGINE_REPORTS_DIR` | `$APEX_HOME/reports` | Where the engine writes scan reports (`.afr` archives, generated HTML/JSON/XML/text exports). Move to a larger volume if you keep a long history. |
+| `APEX_ENGINE_SNAPSHOTS_DIR` | `$APEX_HOME/snapshots` | Suspended-scan session snapshots used by `resume`. Can grow large for long-running scans — point at a faster / bigger disk if needed. |
+
 ### Apex Recon Pro database (embedded PostgreSQL)
 
 | Variable | Default | What it does |
