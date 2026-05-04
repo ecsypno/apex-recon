@@ -376,7 +376,10 @@ rkn_archive="apex-recon-v$latest_version-$(operating_system)-$(architecture).tar
 rkn_url="https://github.com/ecsypno/apex-recon/releases/download/$latest_version/$rkn_archive"
 rkn_dir="./apex-recon-v$latest_version"
 rkn_package="./$rkn_archive"
-rkn_license_file="$HOME/.rkn/license.key"
+rkn_home="${APEX_HOME:-$HOME/.apex}"
+# Encrypted license data file; matches Ecsypno::License::LICENSE_DATA_FILENAME.
+# (The plaintext key sits beside it as license.key — survives crypto rotations.)
+rkn_license_file="$rkn_home/license"
 
 # Clear any partial state from a prior interrupted attempt so the next steps
 # don't mix old + new files.
