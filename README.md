@@ -8,6 +8,7 @@ Installation instructions for [Apex Recon](https://ecsypno.com/pages/codename-rk
 * [Automated installation](#automated-installation) -- for Linux. 
 * [Manual installation](#manual-installation) -- for Linux.
 * [Dependencies for headless environments or WSL](#dependencies-for-headless-environments-or-wsl)
+* [Environment variables](#environment-variables) -- for ops, air-gapped, multi-volume layouts.
 
 ## Docker installation
 
@@ -75,6 +76,56 @@ sudo apt-get update
 sudo apt-get install -y libgconf-2-4 libatk1.0-0 libatk-bridge2.0-0 \
   libgdk-pixbuf2.0-0 libgtk-3-0 libgbm-dev libnss3-dev libxss-dev libasound2
 ```
+
+## Environment variables
+
+These can be exported **before** running the installer (or before the first
+invocation of any `bin/apex*` executable) to override defaults. Most users
+won't need any of them — they exist for ops folks running on shared boxes,
+behind proxies, with separate disks, or in air-gapped environments.
+
+### Home directory
+
+| Variable | Default | What it does |
+|---|---|---|
+| `APEX_HOME` | `~/.apex` | Single root for **all** Apex Recon user-scoped state — the encrypted `license` blob and plaintext `license.key`, scan reports, snapshots, engine logs, the embedded PostgreSQL data directory, and the `latest_version` stamp written by the auto-update check. Override this to put everything on a different volume (e.g. `APEX_HOME=/mnt/scratch/apex`). |
+
+### Logs
+
+| Variable | Default | What it does |
+|---|---|---|
+| `APEX_ENGINE_LOG_DIR` | `$APEX_HOME/logs/engine` | Engine-side run logs. |
+| `APEX_PRO_LOG_DIR` | `$APEX_HOME/logs/pro` | Apex Recon Pro (Rails) + bundled PostgreSQL logs. |
+
+### Apex Recon Pro database (embedded PostgreSQL)
+
+| Variable | Default | What it does |
+|---|---|---|
+| `APEX_PRO_DB_DIR` | `$APEX_HOME/pro/db` | PostgreSQL cluster data dir (`initdb -D`). Move this to a faster / larger volume for big scans. |
+| `APEX_PRO_DB_SOCKET_DIR` | `$APEX_HOME/pro/run` | Unix socket dir Pro connects on. |
+| `APEX_PRO_DB_NAME` | `apex_pro` | Database name created on first start. |
+| `APEX_PRO_PG_PASSWD` | *(none)* | Password for the Pro DB user. The Rails app reads this on startup; required when running `assets:precompile` or any production boot. |
+
+### Engine
+
+| Variable | Default | What it does |
+|---|---|---|
+| `SPECTRE_CHECK_SERVER` | `http://checks.ecsypno.com` | URL of the SSRF check server (Apex Recon embeds the SCNR engine, so the engine-side env var still uses the `SPECTRE_` prefix). Override it for air-gapped installs running their own check server — see the [air-gapped guide](https://documentation.ecsypno.com/rkn/how-to/run-air-gapped.html). |
+| `SPECTRE_ENGINE_PROFILE` | *(unset)* | Set to anything truthy to enable the engine's profiling output (verbose, dev/debug only). |
+
+### Networking
+
+| Variable | Default | What it does |
+|---|---|---|
+| `APEX_PROXY` | *(unset)* | Forwarded as `HTTP_PROXY` / `http_proxy` for the build's outbound calls (release feed lookup, dependency fetches, license server pings). |
+| `CURL_CA_BUNDLE` / `SSL_CERT_FILE` | bundled `etc/ssl/ca/cacert.pem` | Override if you need to trust an enterprise / corporate CA bundle. |
+
+### Standard
+
+| Variable | What it does |
+|---|---|
+| `TMPDIR` | Where engine snapshot/work dirs are created (`Dir.mktmpdir`). Set to a large volume if your runs hit "no space left on device". |
+| `TZ` | Falls into `Setting.detect_system_timezone` chain (after `Rails.application.config.time_zone` / `/etc/timezone` / `/etc/localtime`) when nothing else resolves. |
 
 ## License
 
