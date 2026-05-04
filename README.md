@@ -104,14 +104,6 @@ behind proxies, with separate disks, or in air-gapped environments.
 | `APEX_PRO_DB_DIR` | `$APEX_HOME/pro/db` | PostgreSQL cluster data dir (`initdb -D`). Move this to a faster / larger volume for big scans. |
 | `APEX_PRO_DB_SOCKET_DIR` | `$APEX_HOME/pro/run` | Unix socket dir Pro connects on. |
 | `APEX_PRO_DB_NAME` | `apex_pro` | Database name created on first start. |
-| `APEX_PRO_PG_PASSWD` | *(none)* | Password for the Pro DB user. The Rails app reads this on startup; required when running `assets:precompile` or any production boot. |
-
-### Engine
-
-| Variable | Default | What it does |
-|---|---|---|
-| `SPECTRE_CHECK_SERVER` | `http://checks.ecsypno.com` | URL of the SSRF check server (Apex Recon embeds the SCNR engine, so the engine-side env var still uses the `SPECTRE_` prefix). Override it for air-gapped installs running their own check server — see the [air-gapped guide](https://documentation.ecsypno.com/rkn/how-to/run-air-gapped.html). |
-| `SPECTRE_ENGINE_PROFILE` | *(unset)* | Set to anything truthy to enable the engine's profiling output (verbose, dev/debug only). |
 
 ### Networking
 
