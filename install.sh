@@ -377,7 +377,7 @@ rkn_url="https://github.com/ecsypno/apex-recon/releases/download/$latest_version
 rkn_dir="./apex-recon-v$latest_version"
 rkn_package="./$rkn_archive"
 rkn_home="${APEX_HOME:-$HOME/.apex}"
-# Encrypted license data file; matches Ecsypno::License::LICENSE_DATA_FILENAME.
+# Encrypted license data file;.
 # (The plaintext key sits beside it as license.key — survives crypto rotations.)
 rkn_license_file="$rkn_home/license"
 
